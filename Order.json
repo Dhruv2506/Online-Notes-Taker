@@ -1,0 +1,52 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:digitaltwins:syndbtemp:Order;1",
+    "@type": "Interface",
+    "displayName": "Order",
+    "description": "A document or commission to order products.",
+    "comment": "According to Manufacturing.Order in Synapse Database Template",
+    "contents": [
+        {
+            "@type": "Relationship",
+            "name": "contains",
+            "displayName": "Contains",
+            "description": "This material lot is contained in this Order",
+            "target": "dtmi:digitaltwins:isa95:MaterialLot;1"
+        },
+        {
+            "@type": "Property",
+            "name": "orderId",
+            "displayName": "Order Id",
+            "description": "The unique number that identifies an Order.",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "numberOfOrderLines",
+            "displayName": "Number of Order Lines",
+            "description": "The number of Order Line Items associated with the Order.",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "orderReceivedTimestamp",
+            "displayName": "Order Received Timestamp",
+            "description": "The timestamp that the Order was received from the Customer/Customer Account.",
+            "schema": "dateTime"
+        },
+        {
+            "@type": "Property",
+            "name": "totalOrderWeight",
+            "displayName": "Total Order Weight",
+            "description": "The total weight of the Order.",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "orderProcessingStatus",
+            "displayName": "Order Processing Status",
+            "description": "Order Processing Status.",
+            "schema": "string"
+        }
+    ]
+}
